@@ -1,13 +1,29 @@
 /* /css/styles.css — Vínico */
 
+:root {
+  --color-bg: #f6f0e4;
+  --color-bg-card: #fffdf8;
+  --color-ink: #2a231c;
+  --color-ink-soft: #6b6154;
+  --color-wine: #5c1a2b;
+  --color-wine-dark: #3a0f1a;
+  --color-wine-soft: #7a2e40;
+  --color-gold: #a9822f;
+  --color-gold-light: #cba556;
+  --color-line: #e4d7bb;
+  --color-header-bg: #1c1210;
+  --color-header-text: #f3e9d6;
+  --color-alert: #9c2b3a;
+}
+
 *, *::before, *::after { box-sizing: border-box; }
 
 html { scroll-behavior: smooth; }
 
 body {
-  font-family: "Playfair Display", serif;
-  background-color: #faf3ea;
-  color: #333;
+  font-family: "Cormorant Garamond", "Playfair Display", serif;
+  background-color: var(--color-bg);
+  color: var(--color-ink);
   margin: 0;
   padding: 0;
   line-height: 1.6;
@@ -19,7 +35,7 @@ body {
   position: absolute;
   top: -100px;
   left: 1rem;
-  background: #d4af37;
+  background: var(--color-gold);
   color: #fff;
   padding: 0.5rem 1rem;
   border-radius: 0 0 8px 8px;
@@ -38,16 +54,16 @@ button:focus-visible,
 input:focus-visible,
 textarea:focus-visible,
 select:focus-visible {
-  outline: 3px solid #d4af37;
+  outline: 3px solid var(--color-gold-light);
   outline-offset: 2px;
   border-radius: 4px;
 }
 
 /* ===== Header ===== */
 header {
-  background-color: #fffaf0;
-  border-bottom: 3px solid #d4af37;
-  padding: 0.9rem 2rem;
+  background-color: var(--color-header-bg);
+  border-bottom: 1px solid rgba(203, 165, 86, 0.35);
+  padding: 1rem 2rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -67,18 +83,20 @@ header {
   font-family: "Playfair Display", serif;
   font-size: 2rem;
   font-weight: 700;
-  color: #d4af37;
+  color: var(--color-gold-light);
   text-decoration: none;
-  letter-spacing: -0.01em;
+  letter-spacing: 0.01em;
 }
 
-.logo:hover { color: #b8860b; }
+.logo:hover { color: #e4c583; }
 
 .subtitulo {
   font-family: "Poppins", sans-serif;
-  font-size: 0.8rem;
-  color: #8c2b3a;
+  font-size: 0.72rem;
+  color: rgba(243, 233, 214, 0.65);
   font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
 }
 
 .header-nav ul {
@@ -92,33 +110,35 @@ header {
 
 .header-nav ul li a {
   text-decoration: none;
-  color: #555;
+  color: var(--color-header-text);
   font-family: "Poppins", sans-serif;
-  font-size: 0.9rem;
-  font-weight: 600;
+  font-size: 0.85rem;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
   transition: color 0.2s;
 }
 
-.header-nav ul li a:hover { color: #d4af37; }
+.header-nav ul li a:hover { color: var(--color-gold-light); }
 
 .btn-carrito {
-  background: #d4af37;
-  color: #fff;
-  border: none;
+  background: transparent;
+  color: var(--color-header-text);
+  border: 1.5px solid rgba(243, 233, 214, 0.4);
   border-radius: 24px;
   padding: 0.5rem 1.1rem;
   font-family: "Poppins", sans-serif;
-  font-size: 0.95rem;
-  font-weight: 600;
+  font-size: 0.9rem;
+  font-weight: 500;
   cursor: pointer;
-  transition: background 0.2s;
+  transition: border-color 0.2s, color 0.2s;
 }
 
-.btn-carrito:hover { background: #b8860b; }
+.btn-carrito:hover { border-color: var(--color-gold-light); color: var(--color-gold-light); }
 
 #carrito-contador {
   display: inline-block;
-  background: #a4133c;
+  background: var(--color-alert);
   color: #fff;
   border-radius: 50%;
   font-size: 0.7rem;
@@ -166,14 +186,14 @@ header {
   left: 0;
   right: 0;
   padding: 3rem 3rem 1.8rem;
-  background: linear-gradient(to top, rgba(0,0,0,0.72) 0%, rgba(0,0,0,0.2) 70%, transparent 100%);
+  background: linear-gradient(to top, rgba(0,0,0,0.75) 0%, rgba(0,0,0,0.25) 70%, transparent 100%);
 }
 
 .carousel-caption h2 {
   font-family: "Playfair Display", serif;
-  font-size: 2.4rem;
+  font-size: 2.6rem;
   font-weight: 700;
-  color: #fff;
+  color: #f3e9d6;
   margin: 0 0 0.4rem;
   text-shadow: 0 2px 8px rgba(0,0,0,0.4);
 }
@@ -182,22 +202,7 @@ header {
   font-family: "Poppins", sans-serif;
   font-size: 1.05rem;
   margin: 0;
-  color: rgba(255,255,255,0.88);
-}
-
-.carousel-slide--video .video-slide-bg {
-  width: 100%;
-  height: 480px;
-  background: #0a0a0a;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.carousel-slide--video iframe {
-  width: 100%;
-  height: 100%;
-  border: none;
+  color: rgba(255,255,255,0.85);
 }
 
 .carousel-btn {
@@ -260,26 +265,112 @@ header {
 /* ===== Secciones ===== */
 .productos, .video, .contacto {
   text-align: center;
-  margin: 3.5rem auto;
-  max-width: 960px;
+  margin: 4rem auto;
+  max-width: 1100px;
   padding: 0 1.5rem;
 }
 
-h2 { color: #d4af37; font-size: 1.8rem; font-weight: 700; margin-bottom: 1.5rem; }
-h3 { color: #8c2b3a; font-size: 1.3rem; margin-bottom: 1rem; }
+h2 {
+  font-family: "Playfair Display", serif;
+  color: var(--color-wine);
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 0.4rem;
+  text-wrap: balance;
+}
+
+.subtitulo-seccion {
+  font-family: "Poppins", sans-serif;
+  font-size: 0.85rem;
+  color: var(--color-ink-soft);
+  margin: 0 0 2rem;
+}
+
+h3 { color: var(--color-wine); font-size: 1.3rem; margin-bottom: 1rem; }
+
+/* ===== Buscador + filtros ===== */
+.buscador-catalogo {
+  max-width: 480px;
+  margin: 0 auto 1.5rem;
+  position: relative;
+}
+
+.buscador-catalogo input {
+  width: 100%;
+  padding: 0.8rem 1.1rem 0.8rem 2.6rem;
+  border: 1.5px solid var(--color-line);
+  border-radius: 30px;
+  font-family: "Poppins", sans-serif;
+  font-size: 0.95rem;
+  background: var(--color-bg-card);
+  color: var(--color-ink);
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.buscador-catalogo input:focus {
+  border-color: var(--color-gold);
+  box-shadow: 0 0 0 3px rgba(169, 130, 47, 0.15);
+}
+
+.buscador-catalogo .icono-lupa {
+  position: absolute;
+  left: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--color-ink-soft);
+  font-size: 1rem;
+  pointer-events: none;
+}
+
+.resultado-contador {
+  font-family: "Poppins", sans-serif;
+  font-size: 0.8rem;
+  color: var(--color-ink-soft);
+  margin: -0.5rem 0 1.5rem;
+}
+
+.filtros {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.6rem;
+  margin-bottom: 1.75rem;
+}
+
+.filtro-btn {
+  background: var(--color-bg-card);
+  color: var(--color-wine);
+  border: 1.5px solid var(--color-line);
+  padding: 0.45rem 1.15rem;
+  border-radius: 20px;
+  font-family: "Poppins", sans-serif;
+  font-size: 0.82rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s, border-color 0.2s;
+}
+
+.filtro-btn:hover { border-color: var(--color-gold); }
+
+.filtro-btn.activo {
+  background: var(--color-wine);
+  color: #fdf6ec;
+  border-color: var(--color-wine);
+}
 
 /* ===== Cards — Flexbox (requisito) ===== */
 .contenedor-tarjetas {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 1.5rem;
+  gap: 1.75rem;
   padding: 0.5rem 0;
 }
 
 .card {
-  flex: 1 1 200px;
-  max-width: 240px;
+  flex: 1 1 220px;
+  max-width: 250px;
 }
 
 /* ===== Reseñas — Grid (requisito) ===== */
@@ -298,18 +389,19 @@ h3 { color: #8c2b3a; font-size: 1.3rem; margin-bottom: 1rem; }
 }
 
 .resena-card {
-  background: #fffaf0;
-  border: 1.5px solid #e8d5a3;
-  border-radius: 16px;
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-line);
+  border-left: 3px solid var(--color-gold);
+  border-radius: 4px;
   padding: 1.5rem;
   text-align: left;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+  box-shadow: 0 4px 12px rgba(42, 35, 28, 0.05);
 }
 
 .resena-texto {
   font-family: "Playfair Display", serif;
-  font-size: 1rem;
-  color: #444;
+  font-size: 1.05rem;
+  color: var(--color-ink);
   margin: 0 0 0.75rem;
   font-style: italic;
   line-height: 1.7;
@@ -317,10 +409,12 @@ h3 { color: #8c2b3a; font-size: 1.3rem; margin-bottom: 1rem; }
 
 .resena-autor {
   font-family: "Poppins", sans-serif;
-  font-size: 0.85rem;
+  font-size: 0.82rem;
   font-weight: 600;
-  color: #d4af37;
+  color: var(--color-gold);
   margin: 0 0 0.25rem;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
 }
 
 .resena-estrellas {
@@ -332,51 +426,66 @@ h3 { color: #8c2b3a; font-size: 1.3rem; margin-bottom: 1rem; }
   .contenedor-resenas { grid-template-columns: 1fr; }
 }
 
-/* ===== Cards base ===== */
+/* ===== Cards de producto ===== */
 .card {
-  background: #fffaf0;
-  border: 1.5px solid #e8d5a3;
-  border-radius: 16px;
-  padding: 1.2rem;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-line);
+  border-radius: 6px;
+  padding: 0;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(42, 35, 28, 0.06);
   transition: transform 0.25s, box-shadow 0.25s;
-  text-align: center;
+  text-align: left;
   display: flex;
   flex-direction: column;
 }
 
 .card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.13);
+  transform: translateY(-5px);
+  box-shadow: 0 12px 24px rgba(42, 35, 28, 0.15);
 }
 
 .card img {
   width: 100%;
-  height: 200px;
+  height: 210px;
   object-fit: cover;
-  border-radius: 10px;
-  margin-bottom: 0.8rem;
+  display: block;
+  background: #efe6d3;
 }
 
-.card h3 { font-size: 1rem; color: #333; margin: 0.4rem 0 0.3rem; }
-.card p { font-family: "Poppins", sans-serif; font-size: 0.85rem; color: #777; margin: 0 0 0.5rem; flex: 1; }
+.card .card-body { padding: 1.1rem 1.2rem 1.3rem; display: flex; flex-direction: column; flex: 1; }
+
+.card .card-meta {
+  font-family: "Poppins", sans-serif;
+  font-size: 0.68rem;
+  color: var(--color-gold);
+  margin: 0 0 0.35rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-weight: 600;
+}
+
+.card h3 { font-size: 1.15rem; color: var(--color-ink); margin: 0 0 0.35rem; font-family: "Playfair Display", serif; }
+.card p { font-family: "Poppins", sans-serif; font-size: 0.85rem; color: var(--color-ink-soft); margin: 0 0 0.6rem; flex: 1; line-height: 1.5; }
+.card .card-precio { font-family: "Poppins", sans-serif; font-weight: 700; font-size: 1.05rem; color: var(--color-wine); margin: 0 0 0.7rem; }
 
 /* ===== Botones ===== */
 button, .btn {
-  background-color: #d4af37;
-  color: #fff;
+  background-color: var(--color-wine);
+  color: #fdf6ec;
   border: none;
   padding: 0.8rem 1.4rem;
-  border-radius: 10px;
+  border-radius: 6px;
   font-family: "Poppins", sans-serif;
   font-weight: 600;
+  font-size: 0.9rem;
   cursor: pointer;
   transition: background-color 0.2s;
 }
 
-button:hover, .btn:hover { background-color: #b8860b; }
+button:hover, .btn:hover { background-color: var(--color-wine-dark); }
 
-.btn-agregar { width: 100%; margin-top: 0.6rem; padding: 0.6rem 1rem; font-size: 0.85rem; }
+.btn-agregar { width: 100%; margin-top: 0; padding: 0.65rem 1rem; font-size: 0.82rem; }
 
 /* ===== Formulario ===== */
 .contacto form, .form-contacto {
@@ -394,11 +503,12 @@ button:hover, .btn:hover { background-color: #b8860b; }
 .form-contacto textarea {
   width: 100%;
   padding: 0.75rem 1rem;
-  border: 1.5px solid #e8d5a3;
-  border-radius: 10px;
+  border: 1.5px solid var(--color-line);
+  border-radius: 8px;
   font-family: "Poppins", sans-serif;
   font-size: 0.95rem;
-  background: #fffaf0;
+  background: var(--color-bg-card);
+  color: var(--color-ink);
   outline: none;
   transition: border-color 0.2s;
 }
@@ -406,20 +516,32 @@ button:hover, .btn:hover { background-color: #b8860b; }
 .contacto form input:focus,
 .contacto form textarea:focus,
 .form-contacto input:focus,
-.form-contacto textarea:focus { border-color: #d4af37; }
+.form-contacto textarea:focus { border-color: var(--color-gold); }
 
 .contacto form textarea,
 .form-contacto textarea { resize: vertical; min-height: 120px; }
 
-.titulo-contacto { text-align: center; font-size: 2rem; color: #d4af37; margin-bottom: 1rem; }
+.titulo-contacto { text-align: center; font-size: 2rem; color: var(--color-wine); margin-bottom: 1rem; font-family: "Playfair Display", serif; }
 
 .grupo-input { display: flex; flex-direction: column; gap: 0.4rem; }
-.grupo-input label { font-family: "Poppins", sans-serif; font-size: 0.9rem; font-weight: 600; color: #555; }
+.grupo-input label { font-family: "Poppins", sans-serif; font-size: 0.85rem; font-weight: 600; color: var(--color-ink-soft); }
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
 
 /* ===== Utilidades ===== */
-.text-secondary { color: #d4af37; }
-.bg-secondary { background-color: #d4af37 !important; color: #fff !important; }
-.text-dark { color: #333; }
+.text-secondary { color: var(--color-gold); }
+.bg-secondary { background-color: var(--color-gold) !important; color: #fff !important; }
+.text-dark { color: var(--color-ink); }
 
 /* ===== Panel carrito ===== */
 .panel-carrito {
@@ -429,7 +551,7 @@ button:hover, .btn:hover { background-color: #b8860b; }
   width: 360px;
   max-width: 92vw;
   height: 100%;
-  background: #fff;
+  background: var(--color-bg-card);
   box-shadow: -4px 0 20px rgba(0,0,0,0.15);
   display: flex;
   flex-direction: column;
@@ -446,12 +568,12 @@ button:hover, .btn:hover { background-color: #b8860b; }
   align-items: center;
   margin-bottom: 1rem;
   padding-bottom: 0.75rem;
-  border-bottom: 1px solid #f0e6cc;
+  border-bottom: 1px solid var(--color-line);
 }
 
 .panel-carrito-header h2 { font-size: 1.2rem; margin: 0; }
-.panel-carrito-header button { background: transparent; color: #999; font-size: 1.1rem; padding: 0.25rem 0.5rem; border-radius: 6px; }
-.panel-carrito-header button:hover { background: #f5f5f5; color: #333; }
+.panel-carrito-header button { background: transparent; color: var(--color-ink-soft); font-size: 1.1rem; padding: 0.25rem 0.5rem; border-radius: 6px; }
+.panel-carrito-header button:hover { background: var(--color-bg); color: var(--color-ink); }
 
 .lista-carrito { flex: 1; overflow-y: auto; }
 
@@ -459,33 +581,33 @@ button:hover, .btn:hover { background-color: #b8860b; }
   display: flex;
   gap: 10px;
   align-items: flex-start;
-  border-bottom: 1px solid #f5f5f5;
+  border-bottom: 1px solid var(--color-bg);
   padding: 12px 0;
 }
 
 .item-carrito img { width: 60px; height: 60px; object-fit: cover; border-radius: 8px; flex-shrink: 0; }
 .item-info { flex: 1; }
-.item-info h4 { font-size: 0.9rem; margin: 0 0 2px; color: #333; }
-.item-info p { font-size: 0.8rem; color: #999; margin: 0; font-family: "Poppins", sans-serif; }
+.item-info h4 { font-size: 0.9rem; margin: 0 0 2px; color: var(--color-ink); font-family: "Poppins", sans-serif; font-weight: 600; }
+.item-info p { font-size: 0.8rem; color: var(--color-ink-soft); margin: 0; font-family: "Poppins", sans-serif; }
 
 .item-cantidad { display: flex; align-items: center; gap: 8px; margin-top: 6px; }
-.item-cantidad button { background: #f5f5f5; color: #333; width: 26px; height: 26px; border-radius: 50%; padding: 0; font-size: 1rem; display: flex; align-items: center; justify-content: center; }
-.item-cantidad button:hover { background: #e8d5a3; }
+.item-cantidad button { background: var(--color-bg); color: var(--color-ink); width: 26px; height: 26px; border-radius: 50%; padding: 0; font-size: 1rem; display: flex; align-items: center; justify-content: center; }
+.item-cantidad button:hover { background: var(--color-line); }
 .item-cantidad span { font-family: "Poppins", sans-serif; font-weight: 600; font-size: 0.9rem; }
 
 .item-subtotal { display: flex; flex-direction: column; align-items: flex-end; gap: 4px; flex-shrink: 0; }
-.item-subtotal p { font-family: "Poppins", sans-serif; font-weight: 600; font-size: 0.9rem; margin: 0; color: #d4af37; }
+.item-subtotal p { font-family: "Poppins", sans-serif; font-weight: 600; font-size: 0.9rem; margin: 0; color: var(--color-wine); }
 .item-subtotal button { background: transparent; color: #ccc; padding: 0; font-size: 1rem; }
-.item-subtotal button:hover { color: #a4133c; background: transparent; }
+.item-subtotal button:hover { color: var(--color-alert); background: transparent; }
 
-.carrito-vacio { text-align: center; color: #aaa; margin-top: 3rem; font-family: "Poppins", sans-serif; font-size: 0.9rem; }
+.carrito-vacio { text-align: center; color: var(--color-ink-soft); margin-top: 3rem; font-family: "Poppins", sans-serif; font-size: 0.9rem; }
 
-.panel-carrito-footer { border-top: 1px solid #f0e6cc; padding-top: 1rem; margin-top: 0.5rem; }
-.panel-carrito-footer > p { font-family: "Poppins", sans-serif; font-weight: 700; font-size: 1.1rem; margin: 0 0 0.75rem; }
+.panel-carrito-footer { border-top: 1px solid var(--color-line); padding-top: 1rem; margin-top: 0.5rem; }
+.panel-carrito-footer > p { font-family: "Poppins", sans-serif; font-weight: 700; font-size: 1.1rem; margin: 0 0 0.75rem; color: var(--color-ink); }
 .panel-carrito-footer button { width: 100%; margin-bottom: 0.5rem; padding: 0.75rem; }
 
-.btn-secundario { background: #f5f5f5; color: #555; }
-.btn-secundario:hover { background: #e8d5a3; color: #333; }
+.btn-secundario { background: var(--color-bg); color: var(--color-ink-soft); }
+.btn-secundario:hover { background: var(--color-line); color: var(--color-ink); }
 
 /* ===== Toast ===== */
 #toast-mensaje {
@@ -493,8 +615,8 @@ button:hover, .btn:hover { background-color: #b8860b; }
   bottom: -70px;
   left: 50%;
   transform: translateX(-50%);
-  background: #333;
-  color: #fff;
+  background: var(--color-header-bg);
+  color: #f3e9d6;
   padding: 0.8rem 1.5rem;
   border-radius: 10px;
   font-family: "Poppins", sans-serif;
@@ -510,31 +632,32 @@ button:hover, .btn:hover { background-color: #b8860b; }
   text-align: center;
   width: 100%;
   padding: 2rem;
-  color: #aaa;
+  color: var(--color-ink-soft);
   font-family: "Poppins", sans-serif;
 }
 
 /* ===== Footer ===== */
 footer {
-  background-color: #fffaf0;
+  background-color: var(--color-header-bg);
   text-align: center;
-  padding: 2rem 1rem;
-  border-top: 3px solid #d4af37;
+  padding: 2.5rem 1rem 2rem;
   margin-top: 3rem;
 }
 
 footer p {
   font-family: "Poppins", sans-serif;
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   margin: 0.25rem 0;
-  color: #666;
+  color: rgba(243, 233, 214, 0.7);
 }
+
+footer a { color: var(--color-gold-light); }
 
 .firma {
   margin-top: 0.75rem;
   font-style: italic;
-  color: #8c2b3a;
-  font-weight: 600;
+  color: rgba(243, 233, 214, 0.5);
+  font-weight: 400;
 }
 
 .footer-social {
@@ -561,27 +684,11 @@ footer p {
   object-fit: cover;
 }
 
-/* ===== Responsive ===== */
-@media (max-width: 768px) {
-  header { flex-wrap: wrap; padding: 0.8rem 1rem; }
-  .header-nav ul { gap: 1rem; font-size: 0.85rem; }
-  .carousel-slide img { height: 260px; }
-  .carousel-slide--video .video-slide-bg { height: 260px; }
-  .carousel-caption h2 { font-size: 1.3rem; }
-  .carousel-caption { padding: 1.5rem 1.2rem 1rem; }
-  .card { width: 44%; min-width: 150px; }
-}
-
-@media (max-width: 480px) {
-  .header-nav ul { gap: 0.75rem; }
-  .card { width: 90%; max-width: 280px; }
-}
-
 /* ===== Modal verificación de edad ===== */
 .modal-edad {
   position: fixed;
   inset: 0;
-  background: rgba(20, 8, 12, 0.88);
+  background: rgba(20, 8, 12, 0.9);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -592,9 +699,9 @@ footer p {
 .modal-edad.oculto { display: none; }
 
 .modal-edad-caja {
-  background: #fffaf0;
-  border: 2px solid #d4af37;
-  border-radius: 16px;
+  background: var(--color-bg-card);
+  border-top: 3px solid var(--color-gold);
+  border-radius: 4px;
   max-width: 420px;
   width: 100%;
   padding: 2rem 1.75rem;
@@ -603,14 +710,14 @@ footer p {
 }
 
 .modal-edad-caja h2 {
-  color: #722f37;
+  color: var(--color-wine);
   margin-top: 0;
 }
 
 .modal-edad-caja p {
   font-family: "Poppins", sans-serif;
   font-size: 0.92rem;
-  color: #555;
+  color: var(--color-ink-soft);
   line-height: 1.6;
 }
 
@@ -628,52 +735,13 @@ footer p {
   text-align: center;
 }
 
-/* ===== Filtros de catálogo ===== */
-.filtros {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 0.6rem;
-  margin-bottom: 1.75rem;
-}
-
-.filtro-btn {
-  background: #fffaf0;
-  color: #722f37;
-  border: 1.5px solid #d4af37;
-  padding: 0.45rem 1.1rem;
-  border-radius: 20px;
-  font-family: "Poppins", sans-serif;
-  font-size: 0.85rem;
-  font-weight: 600;
-  cursor: pointer;
-  transition: background 0.2s, color 0.2s;
-}
-
-.filtro-btn:hover { background: #f5e8c8; }
-
-.filtro-btn.activo {
-  background: #722f37;
-  color: #fffaf0;
-  border-color: #722f37;
-}
-
-/* ===== Tarjeta de producto: info extra ===== */
-.card .card-meta {
-  font-family: "Poppins", sans-serif;
-  font-size: 0.72rem;
-  color: #a08a5c;
-  margin: 0 0 0.3rem;
-  text-transform: uppercase;
-  letter-spacing: 0.03em;
-}
-
 /* ===== Aviso legal footer ===== */
 .aviso-legal {
   font-family: "Poppins", sans-serif;
-  font-size: 0.78rem;
-  color: #722f37;
-  background: #f5e8c8;
+  font-size: 0.75rem;
+  color: rgba(243, 233, 214, 0.75);
+  background: rgba(243, 233, 214, 0.08);
+  border: 1px solid rgba(243, 233, 214, 0.15);
   border-radius: 8px;
   padding: 0.6rem 1rem;
   max-width: 480px;
@@ -696,8 +764,8 @@ footer p {
 .modal-checkout[aria-hidden="true"] { display: none; }
 
 .modal-checkout-caja {
-  background: #fffaf0;
-  border-radius: 16px;
+  background: var(--color-bg-card);
+  border-radius: 6px;
   max-width: 460px;
   width: 100%;
   max-height: 90vh;
@@ -712,17 +780,17 @@ footer p {
   top: 0.9rem;
   right: 0.9rem;
   background: transparent;
-  color: #999;
+  color: var(--color-ink-soft);
   padding: 0.25rem 0.5rem;
   font-size: 1.1rem;
 }
 
-.btn-cerrar-modal:hover { background: #f5f5f5; color: #333; }
+.btn-cerrar-modal:hover { background: var(--color-bg); color: var(--color-ink); }
 
 .checkout-subtitulo {
   font-family: "Poppins", sans-serif;
   font-size: 0.85rem;
-  color: #888;
+  color: var(--color-ink-soft);
   margin-top: -0.5rem;
   margin-bottom: 1.25rem;
 }
@@ -737,31 +805,47 @@ footer p {
 #form-checkout input {
   width: 100%;
   padding: 0.7rem 1rem;
-  border: 1.5px solid #e8d5a3;
-  border-radius: 10px;
+  border: 1.5px solid var(--color-line);
+  border-radius: 8px;
   font-family: "Poppins", sans-serif;
   font-size: 0.92rem;
   background: #fff;
+  color: var(--color-ink);
 }
 
-#form-checkout input:focus { outline: none; border-color: #d4af37; }
+#form-checkout input:focus { outline: none; border-color: var(--color-gold); }
 
 .checkout-resumen {
-  background: #f5e8c8;
-  border-radius: 10px;
+  background: var(--color-bg);
+  border-radius: 8px;
   padding: 0.9rem 1rem;
   font-family: "Poppins", sans-serif;
   font-size: 0.85rem;
-  color: #555;
+  color: var(--color-ink-soft);
 }
 
 .checkout-resumen p { margin: 0.2rem 0; display: flex; justify-content: space-between; }
-.checkout-resumen .resumen-total { font-weight: 700; color: #722f37; border-top: 1px dashed #d4af37; margin-top: 0.4rem; padding-top: 0.4rem; }
+.checkout-resumen .resumen-total { font-weight: 700; color: var(--color-wine); border-top: 1px dashed var(--color-line); margin-top: 0.4rem; padding-top: 0.4rem; }
 
 .btn-confirmar { width: 100%; }
 
 .vista-confirmacion { text-align: center; padding: 1rem 0; }
 .confirmacion-icono { font-size: 2.5rem; margin: 0 0 0.5rem; }
-.vista-confirmacion h2 { color: #722f37; }
-.vista-confirmacion p { font-family: "Poppins", sans-serif; color: #666; }
+.vista-confirmacion h2 { color: var(--color-wine); }
+.vista-confirmacion p { font-family: "Poppins", sans-serif; color: var(--color-ink-soft); }
 .oculto { display: none; }
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+  header { flex-wrap: wrap; padding: 0.8rem 1rem; }
+  .header-nav ul { gap: 1rem; font-size: 0.85rem; }
+  .carousel-slide img { height: 260px; }
+  .carousel-caption h2 { font-size: 1.5rem; }
+  .carousel-caption { padding: 1.5rem 1.2rem 1rem; }
+  .card { width: 44%; min-width: 150px; }
+}
+
+@media (max-width: 480px) {
+  .header-nav ul { gap: 0.75rem; }
+  .card { width: 90%; max-width: 280px; }
+}

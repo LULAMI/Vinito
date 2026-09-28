@@ -111,6 +111,13 @@
       <section class="productos" id="productos" aria-labelledby="titulo-productos">
         <h2 id="titulo-productos">Nuestros vinos</h2>
 
+        <div class="buscador-catalogo">
+          <span class="icono-lupa" aria-hidden="true">🔍</span>
+          <label for="buscador-vinos" class="visually-hidden">Buscar vino por nombre, bodega o región</label>
+          <input type="search" id="buscador-vinos" placeholder="Buscar por nombre, bodega o región..." autocomplete="off" />
+        </div>
+        <p id="resultado-contador" class="resultado-contador" aria-live="polite"></p>
+
         <div class="filtros" role="group" aria-label="Filtrar vinos por tipo">
           <button class="filtro-btn activo" data-tipo="Todos">Todos</button>
           <button class="filtro-btn" data-tipo="Tinto">Tintos</button>
