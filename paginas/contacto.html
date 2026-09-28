@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="../css/styles.css" />
+    <title>Contacto · Vínico</title>
+  </head>
+  <body>
+
+    <header>
+      <div class="div-logo">
+        <a class="logo" href="../index.html">Vínico</a>
+        <span class="subtitulo">Vinos de autor, directo a tu mesa</span>
+      </div>
+      <nav class="header-nav">
+        <ul>
+          <li><a href="../index.html">Inicio</a></li>
+          <li><a href="../index.html#productos">Vinos</a></li>
+          <li><a href="./contacto.html">Contacto</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <h1 class="titulo-contacto">Contactanos</h1>
+
+      <form
+        class="form-contacto"
+        action="https://formspree.io/f/xpwzgkvd"
+        method="POST"
+      >
+        <div class="grupo-input">
+          <label for="nombre">Tu nombre:</label>
+          <input id="nombre" type="text" name="nombre" placeholder="Tu nombre" required />
+        </div>
+        <div class="grupo-input">
+          <label for="email">Tu correo:</label>
+          <input id="email" type="email" name="email" placeholder="tu@email.com" required />
+        </div>
+        <div class="grupo-input">
+          <label for="mensaje">Tu mensaje:</label>
+          <textarea id="mensaje" name="mensaje" rows="5" placeholder="¿En qué te podemos ayudar?" required></textarea>
+        </div>
+        <button type="submit">Enviar mensaje 🍷</button>
+      </form>
+    </main>
+
+    <footer>
+      <p>Ubicación: Buenos Aires, Argentina</p>
+      <p>Email: contacto@vinico.com</p>
+      <p>Horario: Lunes a Viernes 9:00 - 18:00</p>
+      <p class="aviso-legal">🔞 Venta exclusiva para mayores de 18 años. Bebé con moderación.</p>
+      <p class="firma">Hecho por Ludmila Mariana Bravo Ruiz Diaz - Talento Tech Comisión 26123</p>
+    </footer>
+
+  </body>
+</html>

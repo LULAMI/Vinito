@@ -1,0 +1,142 @@
+[
+  {
+    "id": 1,
+    "nombre": "Malbec Reserva",
+    "tipo": "Tinto",
+    "bodega": "Bodega Uco Alto",
+    "region": "Valle de Uco, Mendoza",
+    "descripcion": "Notas de ciruela madura, violetas y un final especiado. Taninos sedosos.",
+    "precio": 8500,
+    "imagen": "./imagen/vino1.svg"
+  },
+  {
+    "id": 2,
+    "nombre": "Cabernet Sauvignon",
+    "tipo": "Tinto",
+    "bodega": "Finca del Sol",
+    "region": "Luján de Cuyo, Mendoza",
+    "descripcion": "Cassis, pimiento verde y toque de roble. Estructura firme y elegante.",
+    "precio": 9200,
+    "imagen": "./imagen/vino2.svg"
+  },
+  {
+    "id": 3,
+    "nombre": "Bonarda Clásica",
+    "tipo": "Tinto",
+    "bodega": "Los Cerros",
+    "region": "San Rafael, Mendoza",
+    "descripcion": "Frutos rojos frescos, especias dulces y paso suave en boca.",
+    "precio": 6300,
+    "imagen": "./imagen/vino3.svg"
+  },
+  {
+    "id": 4,
+    "nombre": "Chardonnay Barrica",
+    "tipo": "Blanco",
+    "bodega": "Bodega Uco Alto",
+    "region": "Valle de Uco, Mendoza",
+    "descripcion": "Manzana verde, vainilla y mantequilla. Paso cremoso y untuoso.",
+    "precio": 7800,
+    "imagen": "./imagen/vino4.svg"
+  },
+  {
+    "id": 5,
+    "nombre": "Sauvignon Blanc",
+    "tipo": "Blanco",
+    "bodega": "Finca del Sol",
+    "region": "Pedernal, San Juan",
+    "descripcion": "Cítricos, pomelo y un toque herbáceo. Fresco y muy versátil.",
+    "precio": 6900,
+    "imagen": "./imagen/vino5.svg"
+  },
+  {
+    "id": 6,
+    "nombre": "Torrontés Aromático",
+    "tipo": "Blanco",
+    "bodega": "Altos del Valle",
+    "region": "Cafayate, Salta",
+    "descripcion": "Flores blancas, durazno y uva fresca. Ideal para el aperitivo.",
+    "precio": 6100,
+    "imagen": "./imagen/vino6.svg"
+  },
+  {
+    "id": 7,
+    "nombre": "Malbec Rosé",
+    "tipo": "Rosado",
+    "bodega": "Los Cerros",
+    "region": "Maipú, Mendoza",
+    "descripcion": "Color pétalo, notas de frutilla y un final muy fresco.",
+    "precio": 6700,
+    "imagen": "./imagen/vino7.svg"
+  },
+  {
+    "id": 8,
+    "nombre": "Syrah Rosado",
+    "tipo": "Rosado",
+    "bodega": "Altos del Valle",
+    "region": "Río Negro, Patagonia",
+    "descripcion": "Frutos rojos, especias suaves y acidez equilibrada.",
+    "precio": 7100,
+    "imagen": "./imagen/vino8.svg"
+  },
+  {
+    "id": 9,
+    "nombre": "Espumante Extra Brut",
+    "tipo": "Espumante",
+    "bodega": "Bodega Uco Alto",
+    "region": "Valle de Uco, Mendoza",
+    "descripcion": "Burbuja fina, notas de manzana verde y pan tostado.",
+    "precio": 9900,
+    "imagen": "./imagen/vino9.svg"
+  },
+  {
+    "id": 10,
+    "nombre": "Espumante Rosé",
+    "tipo": "Espumante",
+    "bodega": "Finca del Sol",
+    "region": "Valle de Uco, Mendoza",
+    "descripcion": "Frutos rojos frescos y burbuja cremosa. Perfecto para brindar.",
+    "precio": 10400,
+    "imagen": "./imagen/vino10.svg"
+  },
+  {
+    "id": 11,
+    "nombre": "Cabernet Franc",
+    "tipo": "Tinto",
+    "bodega": "Los Cerros",
+    "region": "Gualtallary, Mendoza",
+    "descripcion": "Pimienta negra, grafito y fruta negra. Elegante y mineral.",
+    "precio": 8900,
+    "imagen": "./imagen/vino11.svg"
+  },
+  {
+    "id": 12,
+    "nombre": "Pinot Noir",
+    "tipo": "Tinto",
+    "bodega": "Altos del Valle",
+    "region": "Río Negro, Patagonia",
+    "descripcion": "Cereza, frambuesa y sutil toque terroso. Cuerpo liviano y sedoso.",
+    "precio": 9600,
+    "imagen": "./imagen/vino12.svg"
+  },
+  {
+    "id": 13,
+    "nombre": "Semillón",
+    "tipo": "Blanco",
+    "bodega": "Finca del Sol",
+    "region": "Pedernal, San Juan",
+    "descripcion": "Miel, membrillo y buena acidez. Ideal con pescados grasos.",
+    "precio": 6500,
+    "imagen": "./imagen/vino13.svg"
+  },
+  {
+    "id": 14,
+    "nombre": "Espumante Brut Nature",
+    "tipo": "Espumante",
+    "bodega": "Bodega Uco Alto",
+    "region": "Valle de Uco, Mendoza",
+    "descripcion": "Sin dosaje de azúcar, muy seco, cítrico y de burbuja persistente.",
+    "precio": 10900,
+    "imagen": "./imagen/vino14.svg"
+  }
+]

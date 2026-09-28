@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 500" width="400" height="500">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#efe6ce"/>
+      <stop offset="100%" stop-color="#d9c99e"/>
+    </linearGradient>
+    <linearGradient id="bottleGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#c2ab72" stop-opacity="0.85"/>
+      <stop offset="50%" stop-color="#c2ab72"/>
+      <stop offset="100%" stop-color="#c2ab72" stop-opacity="0.85"/>
+    </linearGradient>
+  </defs>
+  <rect width="400" height="500" fill="url(#bg)"/>
+  
+        <ellipse cx="330" cy="470" rx="55" ry="14" fill="#00000022"/>
+        <path d="M300 420 L300 470 Q300 480 315 480 L345 480 Q360 480 360 470 L360 420 Z" fill="#c2ab72" opacity="0.35"/>
+        <path d="M298 340 L362 340 L340 420 L320 420 Z" fill="#c2ab72" opacity="0.45"/>
+        <rect x="325" y="480" width="10" height="18" fill="#c2ab72" opacity="0.45"/>
+        
+  <ellipse cx="150" cy="470" rx="70" ry="16" fill="#00000030"/>
+  <path d="M120 180 Q120 140 140 110 L140 60 Q140 40 150 40 L160 40 Q170 40 170 60 L170 110 Q190 140 190 180 L200 430 Q200 460 150 460 Q100 460 110 430 Z" fill="url(#bottleGrad)"/>
+  <rect x="140" y="35" width="20" height="25" rx="3" fill="#3d2b1f"/>
+  <rect x="108" y="230" width="84" height="130" rx="6" fill="#fffef8" opacity="0.95"/>
+  <text x="150" y="275" font-family="Georgia, serif" font-size="15" font-weight="bold" text-anchor="middle" fill="#2a1a12">VÍNICO</text>
+  <text x="150" y="298" font-family="Georgia, serif" font-size="11" text-anchor="middle" fill="#5a3a28">Brut Nature</text>
+  <line x1="122" y1="315" x2="178" y2="315" stroke="#c9a04a" stroke-width="1.5"/>
+  <text x="150" y="335" font-family="Georgia, serif" font-size="9" text-anchor="middle" fill="#7a5a40">Mendoza</text>
+</svg>
